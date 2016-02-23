@@ -1,47 +1,51 @@
 Rails.application.routes.draw do
-  get 'reviews/index'
+get '/' => "agencies#index"
+resources :agencies
+resources :reviews
 
-  get 'reviews/show'
-
-  get 'reviews/new'
-
-  get 'reviews/create'
-
-  get 'reviews/edit'
-
-  get 'reviews/update'
-
-  get 'reviews/destroy'
-
-  get 'agencies/index'
-
-  get 'agencies/show'
-
-  get 'agencies/new'
-
-  get 'agencies/create'
-
-  get 'agencies/edit'
-
-  get 'agencies/update'
-
-  get 'agencies/destroy'
-
-    root 'users#index'
-
-  get '/users' => 'users#index'
-
-  get 'users/show'
-
-  get 'users/new'
-
-  get 'users/create'
-
-  get 'users/edit'
-
-  get 'users/update'
-
-  get 'users/destroy'
+  # get 'reviews/index'
+  #
+  # get 'reviews/show'
+  #
+  # get 'reviews/new'
+  #
+  # post '/reviews' => 'reviews#create'
+  #
+  # get 'reviews/edit'
+  #
+  # get 'reviews/update'
+  #
+  # get 'reviews/destroy'
+  #
+  # get 'agencies/index'
+  #
+  # get 'agencies/show'
+  #
+  # get 'agencies/new'
+  #
+  # get 'agencies/create'
+  #
+  # get 'agencies/edit'
+  #
+  # get 'agencies/update'
+  #
+  # get 'agencies/destroy'
+  #
+  #   root 'users#index'
+  #
+  # get '/users' => 'users#index'
+  #
+  # get 'users/show'
+  #
+  # get 'users/new'
+  #
+  # get 'users/create'
+  #
+  # get 'users/edit'
+  #
+  # get 'users/update'
+  #
+  # get 'users/destroy'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

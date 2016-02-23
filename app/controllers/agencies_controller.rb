@@ -3,6 +3,8 @@ class AgenciesController < ApplicationController
   end
 
   def show
+    @agency = Agency.find(params[:id])
+    @review = Review.new
   end
 
   def new

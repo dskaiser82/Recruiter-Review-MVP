@@ -1,2 +1,13 @@
-<h1>Agencies#show</h1>
-<p>Find me in app/views/agencies/show.html.erb</p>
+<h1><%= @agency.name %></h1>
+
+
+<img src="/logos/<%= @agency.logo%>" alt="vitamin logo" />
+
+<% @agency.reviews.each do |r| %>
+  <p><%= r.rating %>   stars</p>
+  <p><%= r.title %></p>
+  <p><%= r.body %></p>
+  <br><br>
+
+
+<% end %>

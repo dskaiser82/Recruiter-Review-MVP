@@ -4,5 +4,4 @@
 # Examples:
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
-Reviews
+#   Mayor.create(name: 'Emanuel', city: cities.first)Tweet.destroy.
