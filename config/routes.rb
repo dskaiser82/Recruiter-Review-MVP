@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+  get 'agencies/index'
+
+  get 'agencies/show'
+
+  get 'agencies/new'
+
+  get 'agencies/create'
+
+  get 'agencies/edit'
+
+  get 'agencies/update'
+
+  get 'agencies/destroy'
+
     root 'users#index'
 
   get '/users' => 'users#index'
