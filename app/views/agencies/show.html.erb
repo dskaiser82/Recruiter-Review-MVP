@@ -6,6 +6,7 @@
 Rating: <%= r.text_field :rating %><br><br>
 Title: <%= r.text_field :title %><br><br>
 Body: <%= r.text_area :body %><br><br>
+Agency: <%= r.number_field :agency_id, value: params[:id] %><br><br>
 <%#f.hidden_field :agency, :string => @agency%>
 
   <%= r.submit %>

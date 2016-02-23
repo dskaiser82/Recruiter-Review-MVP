@@ -14,6 +14,7 @@ class ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
     if @review.save
+      #@review.agency = Agency.find(params[:id])
       redirect_to agencies_path
     end
   end
@@ -40,6 +41,6 @@ end
 
 private
 def review_params
-  params.require(:review).require(:agency).permit(:rating, :title, :body)
+  params.require(:review).permit(:rating, :title, :body, agency_attributes:[:id])
 
 end
