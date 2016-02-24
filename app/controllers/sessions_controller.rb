@@ -16,6 +16,6 @@ end
 
 def destroy
   session[:user_id] = nil
-  redirect_to root_path
-end
+  redirect_to agencies_path
+  end
 end

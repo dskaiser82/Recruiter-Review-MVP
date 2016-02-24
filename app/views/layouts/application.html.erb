@@ -30,9 +30,17 @@
     </div>
   </nav>
 
-  <% if logged_in? %>
-    <p>"Logged in"</p>
-  <% end %>
+  <%if logged_in? %>
+      <%= link_to 'logout', logout_path %>
+    <% else  %>
+    <%= link_to 'Log-in', new_session_path  %>
+      <% end %>
+
+      <% if flash[:success] %>
+          <div class="alert alert-success"><%= flash[:success] %></div>
+          <% elsif flash[:failure] %>
+              <div class="alert alert-danger"><%= flash[:failure] %></div>
+        <% end %>
 
 
 
