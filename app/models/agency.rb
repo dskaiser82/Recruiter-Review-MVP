@@ -1,5 +1,5 @@
 class Agency < ActiveRecord::Base
-  has_many :reviews
+  has_many :reviews, dependent: :destroy
   accepts_nested_attributes_for :reviews
 
   # It returns the articles whose titles contain one or more words that form the query
