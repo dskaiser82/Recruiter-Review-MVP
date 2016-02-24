@@ -1,8 +1,17 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+
+  get 'sessions/create'
+
+  get 'sessions/destroy'
+
 get '/' => "agencies#index"
 resources :agencies
 resources :reviews
+resources :users
 
+get '/logout' => 'sessions#destroy', as: :logout
+resources :sessions, only: [:new, :create]
 
   # get 'reviews/index'
   #

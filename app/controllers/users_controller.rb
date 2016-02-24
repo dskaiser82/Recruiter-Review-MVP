@@ -1,22 +1,34 @@
 class UsersController < ApplicationController
-  def index
-  end
+  before_action :authorize, only: [:show]
 
-  def show
-  end
+ def index
+   @users = User.all
+ end
 
-  def new
-  end
+ def show
+ @user = User.find(params[:id])
+ end
 
-  def create
-  end
+ def new
+   @user = User.new
+ end
 
-  def edit
-  end
+ def create
+   @user = User.new(user_params)
+   if @user.save
+   redirect_to root_path
+   end
+ end
 
-  def update
-  end
+ def edit
+ end
 
-  def destroy
-  end
+ def update
+ end
+
+ private
+ def user_params
+   params.require(:user).permit(:name, :password)
+ end
+
 end
