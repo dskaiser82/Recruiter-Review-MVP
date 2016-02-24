@@ -12,15 +12,19 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    @review = Review.new(review_params)
-    if @review.save
-      #@review.agency = Agency.find(params[:id])
+    if @review = current_user.reviews.new(review_params)
+        @review.save
+      redirect_to agencies_path
+    else
       redirect_to agencies_path
     end
   end
 
   def edit
     @review =  Review.find(params[:id])
+    unless current_user == @review.user
+      redirect_to agencies_path
+    end
   end
 
   def update
