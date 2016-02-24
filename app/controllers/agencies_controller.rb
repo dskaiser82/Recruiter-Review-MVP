@@ -1,5 +1,6 @@
 class AgenciesController < ApplicationController
   def index
+      @agencies = Agency.all
   end
 
   def show
@@ -21,4 +22,11 @@ class AgenciesController < ApplicationController
 
   def destroy
   end
+end
+
+
+private
+def agency_params
+  params.require(:agency).permit(:name, :website, :headquarters, :focus, :logo)
+
 end

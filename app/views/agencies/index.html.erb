@@ -1,2 +1,9 @@
 <h1>Agencies#index</h1>
 <p>Find me in app/views/agencies/index.html.erb</p>
+
+
+<img src="/logos/1-logo.png" alt="vitamin logo" />
+
+<% @agencies.each do |a| %>
+  <p> <%= a.name %></p>
+<% end %>
