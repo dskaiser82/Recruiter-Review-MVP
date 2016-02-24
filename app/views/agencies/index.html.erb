@@ -1,12 +1,16 @@
-<h1>Agencies#index</h1>
-<p>Find me in app/views/agencies/index.html.erb</p>
+<h1>Los Angeles Agencies</h1>
 
-
+<script>
+console.log("Hi Dan")
+$( "#logo" ).click(function() {
+  alert( "Handler for .click() called." );
+});
+</script>
 
 <% @agencies.each do |a| %>
-  <strong> <%= a.name %></strong>
+ <strong> <%= a.name %></strong>
     <br>HQ:<p> <%= a.headquarters %></p>
-  <p> <img src="/logos/<%= a.logo %>" alt="" /></p>
+  <p> <a href="/agencies/<%=a.id %>"> <img src="/logos/<%= a.logo %>" alt="logo"/></a></p>
   <br><br>
 
 
