@@ -15,3 +15,10 @@
  */
  @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.navbar {
+  background-color: green;
+a {
+  color: white;
+}
+}

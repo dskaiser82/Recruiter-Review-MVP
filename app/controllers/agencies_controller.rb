@@ -1,7 +1,13 @@
 class AgenciesController < ApplicationController
   def index
-      @agencies = Agency.all
+
+    if params[:search]
+      @agencies = Agency.search(params[:search]).order("created_at DESC")
+    else
+        @agencies = Agency.all
+    end
   end
+
 
   def show
     @agency = Agency.find(params[:id])
