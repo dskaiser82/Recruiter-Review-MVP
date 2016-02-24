@@ -17,8 +17,30 @@
 @import "bootstrap";
 
 .navbar {
-  background-color: green;
+  background-color: #89DA59;
+  border: none;
 a {
   color: white;
 }
+}
+
+
+
+.rr-search{
+  margin-left: 50%;
+}
+//This is search magnifying glass
+.fa-search{
+  color: white;
+}
+
+// this is for the search bar length
+input{
+  width: 200px;
+  margin-top: 10px;
+}
+
+//We did this for search button
+.btn{
+  background-color: #0080ff;
 }
