@@ -2,7 +2,7 @@ class AgenciesController < ApplicationController
   def index
 
     if params[:search]
-      @agencies = Agency.search(params[:search]).order("created_at DESC")
+      @agencies = Agency.search(params[:search].titlecase).order("created_at DESC")
     else
         @agencies = Agency.all
     end
