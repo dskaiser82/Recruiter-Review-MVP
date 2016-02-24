@@ -41,6 +41,6 @@ end
 
 private
 def review_params
-  params.require(:review).permit(:rating, :title, :body, agency_attributes:[:id])
+  params.require(:review).permit(:rating, :title, :body, :agency_id)
 
 end
