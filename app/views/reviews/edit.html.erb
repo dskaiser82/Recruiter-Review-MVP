@@ -1,10 +1,11 @@
-<h1>Reviews#edit</h1>
-<p>Find me in app/views/reviews/edit.html.erb</p>
+
 <% if current_user == @review.user %>
-  <h1>Edit Your Tweet</h1>
+  <h1>Edit Your Review</h1>
     <%= form_for @review do |f| %>
     Title: <%= f.text_field :title %><br><br>
     Body: <%= f.text_area :body %><br><br>
       <%= f.submit %>
       <% end %>
 <% end %>
+
+  <%= link_to 'Destroy', @review, :method => :delete, :confirm => "Are you sure?" %>

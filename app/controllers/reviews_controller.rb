@@ -38,7 +38,7 @@ class ReviewsController < ApplicationController
   def destroy
     @review = Review.find(params[:id])
 if @review.destroy
-  redirect_to root_path
+  redirect_to agencies_path
 end
   end
 end
