@@ -1,4 +1,4 @@
-<h1>Los Angeles Agencies</h1>
+
 
 <script>
 console.log("Hi Dan")
@@ -7,15 +7,37 @@ $( "#logo" ).click(function() {
 });
 </script>
 
-<% @agencies.each do |a| %>
- <strong> <%= a.name %></strong><br>
-  <%= a.reviews.average(:rating).round %><i class="fa fa-star"></i>
+<!-- Page Content -->
+    <div class="container">
 
-    <br>HQ:<p> <%= a.headquarters %></p>
-  <p> <a href="/agencies/<%=a.id %>"> <img src="/logos/<%= a.logo %>" alt="logo"/></a></p>
-  <a href="/agencies/<%=a.id %>" class="btn btn-primary btn-small active" role="button">+ Review</a>
-  <br><br>
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Recruiter Agecncies
+                    <!-- <small>Secondary Text</small> -->
+                </h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Project One -->
+  <% @agencies.each do |a| %>
+        <div class="row">
 
 
 
-<% end %>
+            <div class="col-md-5">
+                <a href="/agencies/<%=a.id %>"> <img src="/logos/<%= a.logo %>" alt="logo"/></a>
+                <h3><%= a.name %></h3>
+                <h4><%= a.reviews.average(:rating).round %><i class="fa fa-star"></i></h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
+                <a href="/agencies/<%=a.id %>" class="btn btn-primary btn-small active" role="button">+ Review</a>
+                    <br>HQ:<p> <%= a.headquarters %></p>
+                      <hr>
+                      <br><br>
+
+        </div>
+        <!-- /.row -->
+    </div>
+        <hr>
+        <% end %>
