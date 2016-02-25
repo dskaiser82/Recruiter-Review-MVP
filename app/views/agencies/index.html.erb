@@ -24,20 +24,19 @@ $( "#logo" ).click(function() {
   <% @agencies.each do |a| %>
         <div class="row">
 
-
-
-            <div class="col-md-12 agency-box">
-                <a href="/agencies/<%=a.id %>"> <img src="/logos/<%= a.logo %>" alt="logo"/></a>
-                <h3><%= a.name %></h3>
-                <h4><%= a.reviews.average(:rating).round %><i class="fa fa-star"></i></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
+        <div class="col-md-12 agency-box">
+            <a href="/agencies/<%=a.id %>"> <img src="/logos/<%= a.logo %>" alt="logo"/></a>
+              <h3><%= a.name %></h3>
+              <a href="<%= a.website %>">vitamintalent.com</a>
+                <h3><%= a.reviews.average(:rating).round %><i class="fa fa-star"></i></h3>
+                  <h4><%= a.about %></h4>
                 <a href="/agencies/<%=a.id %>" class="btn btn-primary btn-small active" role="button">+ Review</a>
-                    <br>HQ:<p> <%= a.headquarters %></p>
-                      <hr>
-                      <br><br>
+                <br><p>HQ: <%= a.headquarters %></p>
+             <hr>
+        
 
         </div>
         <!-- /.row -->
     </div>
         <hr>
-        <% end %>
+   <% end %>
