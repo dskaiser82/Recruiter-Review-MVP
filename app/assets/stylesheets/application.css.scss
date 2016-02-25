@@ -16,6 +16,15 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
+
+body {
+  background-color: #fbfbfb;
+}
+
+.agency-box{
+  background-color: white;
+}
+//top nav
 .navbar {
   background-color: #89DA59;
   border: none;
