@@ -1,8 +1,22 @@
+
+
 <h1><%= @agency.name %></h1>
 
+<!-- <%= render 'layouts/star' %> -->
+<div class = "star-select-on">
+ <img class="off one" src="/icons/star-off.png" height="25" widht="25" alt="on" />
+ <img class="off two" src="/icons/star-off.png" height="25" widht="25" alt="on" />
+ <img class="off three" src="/icons/star-off.png" height="25" widht="25" alt="on" />
+ <img class="off four" src="/icons/star-off.png" height="25" widht="25" alt="on" />
+ <img class="off five" src="/icons/star-off.png" height="25" widht="25" alt="on" />
 
+</div>
 <img src="/logos/<%= @agency.logo%>" alt="logo" />
+<h1 class = "rating"></h1>
+
+
 <%= form_for @review do |r| %>
+<%= select_tag(:rating, '<option value="1"><img class="off one" src="/icons/star-off.png" height="25" widht="25" alt="on" /></option>') %>
 
 Rating: <%= r.text_field :rating %><br><br>
 Title: <%= r.text_field :title %><br><br>

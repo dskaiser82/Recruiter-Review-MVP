@@ -14,4 +14,20 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap
+//= require_self
+//= require agency.js
 //= require_tree .
+
+$(function(){
+  console.log("anthing")
+  $( ".off" ).on( "click", function() {
+      console.log("Hi Dannnyyy")
+      $(this).attr('src','/icons/star-green1.png').addClass("selected on")
+      $(".off.selected").prevAll().attr('src','/icons/star-green1.png').addClass("on")
+        var rating = $(".on").length
+        console.log(rating)
+      ;
+
+  });
+
+})
