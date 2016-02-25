@@ -18,20 +18,21 @@
 //= require agency.js
 //= require_tree .
 
-$(function(){
-  console.log("anthing")
-  $( ".off" ).on( "click", function(event) {
-      //on click turn off star to on green
-      $(this).attr('src','/icons/star-green1.png').addClass("selected on")
-      //Make all the previous stars turn on
-      $(".off.selected").prevAll().attr('src','/icons/star-green1.png').addClass("on")
-      //capture number into a rating vriable
-        var rating = $(".on").length
-        //add var rating to h1 class rating in show agencies view
-        $(".rating").append(rating);
-         //only one click
-         $( this ).off( event );
-
-  })
+$(function (){
+  // console.log("anthing")
+  // $( ".off" ).on( "click", function() {
+  //     //on click turn off star to on green
+  //     $(this).attr('src','/icons/star-green1.png').addClass("selected on")
+  //     //Make all the previous stars turn on
+  //     $(".off.selected").prevAll().attr('src','/icons/star-green1.png').addClass("on")
+  //     //capture number into a rating vriable
+  //       var rating = $(".on").length
+  //       //add var rating to h1 class rating in show agencies view
+  //       $(".rating").append(rating);
+  //        //only one click
+  //
+  //
+  // })
+  $('#rating').rating();
 
 })

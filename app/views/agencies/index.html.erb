@@ -8,11 +8,14 @@ $( "#logo" ).click(function() {
 </script>
 
 <% @agencies.each do |a| %>
- <strong> <%= a.name %></strong>
+ <strong> <%= a.name %></strong><br>
+  <%= a.reviews.average(:rating).round %> stars
+
     <br>HQ:<p> <%= a.headquarters %></p>
   <p> <a href="/agencies/<%=a.id %>"> <img src="/logos/<%= a.logo %>" alt="logo"/></a></p>
   <a href="/agencies/<%=a.id %>" class="btn btn-primary btn-small active" role="button">+ Review</a>
   <br><br>
+
 
 
 <% end %>
