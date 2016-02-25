@@ -3,12 +3,13 @@
 
 <img src="/logos/<%= @agency.logo%>" alt="logo" />
 <%= form_for @review do |r| %>
+
 Rating: <%= r.text_field :rating %><br><br>
 Title: <%= r.text_field :title %><br><br>
 Body: <%= r.text_area :body %><br><br>
 Agency: <%= r.number_field :agency_id, value: params[:id] %>
 
-<!-- User: <%= r.number_field :user_id, value: current_user.id   %><br><br> -->
+
 <%#f.hidden_field :agency, :string => @agency%>
 
   <%= r.submit %>
