@@ -16,7 +16,6 @@
 
 
 <%= form_for @review do |r| %>
-<%= select_tag(:rating, '<option value="1"><img class="off one" src="/icons/star-off.png" height="25" widht="25" alt="on" /></option>') %>
 
 Rating: <%= r.text_field :rating %><br><br>
 Title: <%= r.text_field :title %><br><br>
