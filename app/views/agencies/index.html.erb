@@ -9,7 +9,7 @@ $( "#logo" ).click(function() {
 
 <% @agencies.each do |a| %>
  <strong> <%= a.name %></strong><br>
-  <%= a.reviews.average(:rating).round %> stars
+  <%= a.reviews.average(:rating).round %><i class="fa fa-star"></i>
 
     <br>HQ:<p> <%= a.headquarters %></p>
   <p> <a href="/agencies/<%=a.id %>"> <img src="/logos/<%= a.logo %>" alt="logo"/></a></p>

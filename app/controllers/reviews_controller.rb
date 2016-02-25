@@ -12,8 +12,9 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    if @review = current_user.reviews.new(review_params)
-        @review.save
+    @review = current_user.reviews.new(review_params)
+    if @review.save
+      flash[:success] = "Thanks for submitting a review!"
       redirect_to agencies_path
     else
       redirect_to agencies_path
