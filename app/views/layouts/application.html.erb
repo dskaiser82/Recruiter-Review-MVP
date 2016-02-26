@@ -40,19 +40,15 @@
           </div>
     </div>
   </nav>
-<div class="container">
-            <!-- Log-in link_to -->
+  <div class="container">
+      <!-- Log-in link_to -->
       <% if flash[:success] %>
           <div class="alert alert-success"><%= flash[:success] %></div>
               <% elsif flash[:failure] %>
             <div class="alert alert-danger"><%= flash[:failure] %></div>
       <% end %>
-
-
-
       <%= yield %>
-
-</div>
+    </div>
 <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </body>
 </html>

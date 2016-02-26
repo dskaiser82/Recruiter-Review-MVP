@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)Tweet.destroy.
+
+if User.destroy_all && Agency.destroy_all
+
+end
