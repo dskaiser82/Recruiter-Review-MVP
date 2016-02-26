@@ -29,14 +29,14 @@ class ReviewsController < ApplicationController
   def edit
     @review =  Review.find(params[:id])
     unless current_user == @review.user
-      redirect_to agencies_path
+      redirect_to agencies_path(@agency_id)
     end
   end
 
   def update
     @review =  Review.find(params[:id])
   if @review.update_attributes(review_params)
-    redirect_to agency_path @review
+    redirect_to agencies_path(@agency_id)
   end
 
   end

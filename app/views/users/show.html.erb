@@ -1,11 +1,13 @@
 <h1>Your Reviews</h1>
-
-
+<div class="col-md-12 agency-box">
 <% @user.reviews.each do |r| %>
-  <p><%= r.rating %>   stars</p>
-  <p><%= r.title %></p>
-  <p><%= r.body %></p>
+
+
+      <h2 class="title">"<%= r.title %>"</h2>
+        <h4><%= r.rating %> <i class="fa fa-star"></i></h4>
+      <hr>
+    <h4><%= r.body %></4>
   <br><br>
 
-
 <% end %>
+  </div>
