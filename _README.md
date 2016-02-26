@@ -1,7 +1,7 @@
 #Recruiter Review
 ####Overview
 URL: Local host and git hub: https://github.com/dskaiser82/proj2
-Live link coming soon!
+Heroku link: https://mysterious-bayou-36562.herokuapp.com
 
 Job hunters often rely on recruiters and recruiting agencies to get interviews and secure freelance and full-time job placement. At the same time, there is not a go-to resource that ranks recruiting agencies based on user reviews and ratings. Recruiter Review aims to solve this problem by letting users see and write reviews on the various agencies that exist.
 
