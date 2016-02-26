@@ -4,7 +4,7 @@
     <%= form_for @review do |f| %>
     Title: <%= f.text_field :title %><br><br>
     Body: <%= f.text_area :body %><br><br>
-      <%= f.submit %>
+      <%= f.submit class: 'btn btn-danger' %>
       <% end %>
 <% end %>
 

@@ -1,40 +1,31 @@
 
+<div class="col-md-12 agency-box">
+  <h1><%= @agency.name %></h1>
+      <img src="/logos/<%= @agency.logo%>" alt="logo" />
+            <br><br>
+          <%= form_for @review do |r| %>
 
-<h1><%= @agency.name %></h1>
-
-<!-- <%= render 'layouts/star' %> -->
-<!-- <div class = "star-select-on">
- <img class="off one" src="/icons/star-off.png" height="25" widht="25" alt="on" />
- <img class="off two" src="/icons/star-off.png" height="25" widht="25" alt="on" />
- <img class="off three" src="/icons/star-off.png" height="25" widht="25" alt="on" />
- <img class="off four" src="/icons/star-off.png" height="25" widht="25" alt="on" />
- <img class="off five" src="/icons/star-off.png" height="25" widht="25" alt="on" />
-
-</div> -->
+              Rating: <%# r.text_field :rating%><%= hidden_field_tag 'review[rating]', '3', id: 'rating'  %><br><br>
+                Title: <%= r.text_field :title %><br><br>
+                  Body: <%= r.text_area :body %><br><br>
+                  <%= r.hidden_field :agency_id, value: params[:id] %>
 
 
-<img src="/logos/<%= @agency.logo%>" alt="logo" />
-<br><br>
-<%= form_for @review do |r| %>
+              <%#f.hidden_field :agency, :string => @agency%>
 
-Rating: <%# r.text_field :rating%><%= hidden_field_tag 'review[rating]', '3', id: 'rating'  %><br><br>
-Title: <%= r.text_field :title %><br><br>
-Body: <%= r.text_area :body %><br><br>
-<%= r.hidden_field :agency_id, value: params[:id] %>
-
-
-<%#f.hidden_field :agency, :string => @agency%>
-
-  <%= r.submit class: 'btn btn-success' %>
-  <% end %>
-
+                <%= r.submit class: 'btn btn-success' %>
+            <% end %>
+          <hr>
 
 
 <% @agency.reviews.each do |r| %>
-  <p><%= r.rating %>   stars</p>
-  <p><%= r.title %></p>
-  <p><%= r.body %></p>
+
+  <img src="/logos/<%= @agency.logo%>" height="25" width="25" alt="logo"/>
+      <h2 class="title">"<%= r.title %>"</h2>
+        <h4><%= r.rating %> <i class="fa fa-star"></i></h4>
+      <hr>
+    <h4><%= r.body %></4>
   <br><br>
 
-
 <% end %>
+  </div>

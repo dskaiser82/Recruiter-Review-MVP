@@ -23,6 +23,7 @@ body {
 
 .agency-box{
   background-color: white;
+  float: left;
 }
 //top nav
 .navbar {
@@ -63,6 +64,12 @@ input{
 .rating-symbol{
   color:#e5e500;
   font-size: 25px;
+}
+
+//Review Title
+.title{
+  color: #0080ff;
+  font-family: lobster;
 }
 
 //Sum Star
