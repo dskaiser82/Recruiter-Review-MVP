@@ -30,17 +30,17 @@
     </div>
 
             <!-- Log-in link_to -->
-            <div class="log-in col-md-12">
-                  <i class="fa fa-user"></i>
-                      <%if logged_in? %>
-                          <%= link_to 'logout', logout_path %>
-                        <% else  %>
-                  <%= link_to 'Log-in', new_session_path  %>
-                    <% end %>
-                  </div>
-            </div>
-          </nav>
-
+    <div class="log-in col-md-12">
+          <i class="fa fa-user"></i>
+              <%if logged_in? %>
+                  <%= link_to 'logout', logout_path %>
+                <% else  %>
+          <%= link_to 'Log-in', new_session_path  %>
+            <% end %>
+          </div>
+    </div>
+  </nav>
+<div class="container">
             <!-- Log-in link_to -->
       <% if flash[:success] %>
           <div class="alert alert-success"><%= flash[:success] %></div>
@@ -50,7 +50,9 @@
 
 
 
-<%= yield %>
+      <%= yield %>
+
+</div>
 <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </body>
 </html>

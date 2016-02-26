@@ -12,7 +12,12 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    @review = current_user.reviews.new(review_params)
+    if logged_in?
+      @review = current_user.reviews.new(review_params)
+    else
+      @review = Review.new(review_params)
+    end
+
     if @review.save
       flash[:success] = "Thanks for submitting a review!"
       redirect_to agencies_path
