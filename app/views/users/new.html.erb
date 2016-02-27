@@ -1,12 +1,11 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<h1>Sign-up</h1>
 
 <img src="/icons/user-icon.png" height="150" width="150" alt="user-icon" />
 <%= form_for @user do |r| %>
 Username: <%= r.text_field :name %><br><br>
 email: <%= r.text_field :email %><br><br>
-Password: <%= r.text_area :password %><br><br>
+Password: <%= r.text_field :password %><br><br>
 
 
-  <%= r.submit %>
+  <%= r.submit class: 'btn btn-primary' %>
   <% end %>
